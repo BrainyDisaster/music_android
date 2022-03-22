@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fl_bottom"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NowPlayingFragmentBottom">
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/purple_700">
+        <ImageView
+            android:id="@+id/img_picture_playing"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/bg"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:id="@+id/img_next_playing"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_next"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_playPause_playing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:layout_toLeftOf="@id/img_next_playing"
+            android:layout_marginRight="10dp"
+            app:fabSize="mini"
+            app:backgroundTint="@color/white"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/txt_song_name_playing"
+            android:textColor="@color/white"
+            android:text="Song name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_picture_playing"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:maxLines="1"
+            android:layout_toLeftOf="@id/fb_playPause_playing" />
+
+        <TextView
+            android:id="@+id/txt_artist_name_playing"
+            android:layout_below="@id/txt_song_name_playing"
+            android:textColor="@color/white"
+            android:text="Artist name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/img_picture_playing"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:maxLines="1"
+            android:layout_toLeftOf="@id/fb_playPause_playing" />
+    </RelativeLayout>
+
+
+</FrameLayout>
